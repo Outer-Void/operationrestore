@@ -401,17 +401,20 @@
   /* ---------- CONTACT ---------- */
   .contact-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 24px;
   }
   .contact-card {
     border: 1px solid var(--hairline);
-    padding: 28px;
+    padding: 28px 16px;
     text-align: center;
   }
   .contact-card .eyebrow { display: block; margin-bottom: 10px; }
-  .contact-card a, .contact-card span { color: var(--bone); font-size: 1.05rem; font-weight: 600; text-decoration: none; }
-  @media (max-width: 720px) {
+  .contact-card a, .contact-card span { color: var(--bone); font-size: 1rem; font-weight: 600; text-decoration: none; word-break: break-word; }
+  @media (max-width: 860px) {
+    .contact-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 480px) {
     .contact-grid { grid-template-columns: 1fr; }
   }
 
@@ -612,6 +615,10 @@
       <div class="contact-card">
         <span class="eyebrow">Call or Text</span>
         <a href="tel:7317277741">731-727-7741</a>
+      </div>
+      <div class="contact-card">
+        <span class="eyebrow">Email</span>
+        <a href="mailto:operation.restore.jxn@gmail.com">operation.restore.jxn@gmail.com</a>
       </div>
       <div class="contact-card">
         <span class="eyebrow">Serving</span>
