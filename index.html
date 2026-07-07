@@ -96,6 +96,7 @@
     border-bottom: 1px solid var(--hairline);
   }
   .nav-inner {
+    position: relative;
     max-width: 1120px;
     margin: 0 auto;
     padding: 14px 24px;
@@ -132,8 +133,52 @@
     text-transform: uppercase;
   }
   .nav-cta:hover { background: var(--gold-bright); }
+
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid var(--hairline);
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 0;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    margin: 0 auto;
+    background: var(--gold-bright);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle.open span:nth-child(2) { opacity: 0; }
+  .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
   @media (max-width: 720px) {
-    .nav-links { display: none; }
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      gap: 0;
+      background: var(--panel);
+      border-bottom: 1px solid var(--hairline);
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a {
+      padding: 16px 24px;
+      border-top: 1px solid var(--hairline);
+      color: var(--bone);
+    }
+    .nav-cta { display: none; }
+    .nav-toggle { display: flex; }
   }
 
   /* ---------- HERO ---------- */
@@ -439,7 +484,7 @@
       <img src="assets/seal-web.jpg" alt="Operation: Restore seal">
       OPERATION: RESTORE
     </div>
-    <nav class="nav-links">
+    <nav class="nav-links" id="navLinks">
       <a href="#what-we-do">What We Do</a>
       <a href="#saturday">Restore Saturday</a>
       <a href="#involved">Get Involved</a>
@@ -447,6 +492,9 @@
       <a href="#contact">Contact</a>
     </nav>
     <a class="nav-cta" href="#involved">Get Involved</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
@@ -637,6 +685,23 @@
   <div class="eyebrow">Restore People. Restore Homes. Restore Families. Restore Hope.</div>
   <div class="fine">© 2026 Operation: Restore — Jackson, TN. In God We Trust.</div>
 </footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.classList.toggle('open', isOpen);
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      navToggle.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
 
 </body>
 </html>
