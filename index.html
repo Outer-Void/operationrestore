@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Operation: Restore — Jackson, TN</title>
+<meta name="description" content="Operation: Restore is a volunteer-driven movement in Jackson, TN doing free home repairs, family support, and recovery-informed community service.">
+<link rel="canonical" href="https://operationrestore.net/">
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#0B0A08">
+
+<!-- Open Graph / social preview -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Operation: Restore — Jackson, TN">
+<meta property="og:description" content="Restoring Faith. Rebuilding Lives. Free home repairs, family support, and recovery-informed community service in Jackson, TN.">
+<meta property="og:image" content="https://operationrestore.net/assets/banner-web.jpg">
+<meta property="og:url" content="https://operationrestore.net/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Operation: Restore — Jackson, TN">
+<meta name="twitter:description" content="Restoring Faith. Rebuilding Lives. Free home repairs, family support, and recovery-informed community service in Jackson, TN.">
+<meta name="twitter:image" content="https://operationrestore.net/assets/banner-web.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --void: #0B0A08;
+    --panel: #17140F;
+    --panel-2: #1D1912;
+    --gold: #C9A227;
+    --gold-bright: #E8C468;
+    --bone: #EDE6D6;
+    --muted: #A69A82;
+    --hairline: rgba(201,162,39,0.25);
+    --shadow: rgba(0,0,0,0.5);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--void);
+    color: var(--bone);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .display {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.03em;
+    line-height: 1.05;
+    color: var(--bone);
+    margin: 0;
+  }
+
+  .scripture {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    color: var(--gold-bright);
+  }
+
+  a { color: var(--gold-bright); }
+
+  .eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  section { position: relative; }
+
+  /* ---------- NAV ---------- */
+  header.nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(11,10,8,0.88);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--hairline);
+  }
+  .nav-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 0.05em;
+  }
+  .nav-brand img { height: 34px; width: 34px; border-radius: 50%; }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+  .nav-links a { color: var(--muted); text-decoration: none; }
+  .nav-links a:hover { color: var(--gold-bright); }
+  .nav-cta {
+    background: var(--gold);
+    color: var(--void) !important;
+    padding: 8px 18px;
+    border-radius: 2px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .nav-cta:hover { background: var(--gold-bright); }
+  @media (max-width: 720px) {
+    .nav-links { display: none; }
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    padding: 96px 24px 80px;
+    text-align: center;
+    border-bottom: 1px solid var(--hairline);
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,162,39,0.10), transparent 60%),
+      var(--void);
+  }
+  .hero-seal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 900px;
+    height: 900px;
+    background-image: url('assets/seal-web.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    opacity: 0.06;
+    transform: translate(-50%, -50%);
+    animation: spin 240s linear infinite;
+    pointer-events: none;
+  }
+  @keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-seal { animation: none; }
+  }
+  .hero-content { position: relative; z-index: 2; }
+  .hero-seal-img {
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    border: 1px solid var(--hairline);
+    margin-bottom: 28px;
+    box-shadow: 0 0 40px rgba(201,162,39,0.15);
+  }
+  .hero h1 {
+    font-size: clamp(2.6rem, 7vw, 5rem);
+    margin-bottom: 18px;
+  }
+  .hero h1 .gold { color: var(--gold-bright); }
+  .hero-sub {
+    max-width: 620px;
+    margin: 0 auto 40px;
+    font-size: 1.15rem;
+    color: var(--muted);
+  }
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-primary { background: var(--gold); color: var(--void); }
+  .btn-primary:hover { background: var(--gold-bright); }
+  .btn-ghost { border: 1px solid var(--hairline); color: var(--bone); }
+  .btn-ghost:hover { border-color: var(--gold); color: var(--gold-bright); }
+
+  /* ---------- VERSE STRIP ---------- */
+  .verse-strip {
+    padding: 40px 24px;
+    text-align: center;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .verse-strip p { font-size: 1.15rem; max-width: 720px; margin: 0 auto 8px; }
+  .verse-strip cite {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* ---------- SECTION HEADERS ---------- */
+  .section {
+    padding: 88px 0;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .section-head {
+    max-width: 640px;
+    margin: 0 0 48px;
+  }
+  .section-head h2 {
+    font-size: clamp(2rem, 4.5vw, 2.8rem);
+    margin-top: 10px;
+  }
+  .section-head p { color: var(--muted); margin-top: 14px; font-size: 1.02rem; }
+  .center { text-align: center; margin-left: auto; margin-right: auto; }
+
+  /* ---------- ARMS GRID ---------- */
+  .arms-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--hairline);
+    border: 1px solid var(--hairline);
+  }
+  .arm {
+    background: var(--panel);
+    padding: 36px 32px;
+  }
+  .arm .icon {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+    display: block;
+  }
+  .arm h3 {
+    font-size: 1.5rem;
+    color: var(--gold-bright);
+    margin-bottom: 10px;
+    letter-spacing: 0.02em;
+  }
+  .arm p { color: var(--muted); font-size: 0.95rem; margin: 0; }
+  @media (max-width: 640px) {
+    .arms-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ---------- RESTORE SATURDAY ---------- */
+  .saturday {
+    background: var(--panel);
+    border: 1px solid var(--hairline);
+    padding: 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .saturday .eyebrow { margin-bottom: 12px; }
+  .saturday h3 { font-size: 2rem; margin-bottom: 14px; }
+  .saturday p { color: var(--muted); }
+  .saturday-fact {
+    border-left: 2px solid var(--gold);
+    padding-left: 20px;
+  }
+  .saturday-fact strong { display: block; color: var(--bone); font-size: 1.05rem; margin-bottom: 4px; }
+  .saturday-fact span { color: var(--muted); font-size: 0.9rem; }
+  @media (max-width: 720px) {
+    .saturday { grid-template-columns: 1fr; padding: 32px 24px; }
+  }
+
+  /* ---------- IMPACT ---------- */
+  .impact-note {
+    background: var(--panel-2);
+    border: 1px dashed var(--hairline);
+    padding: 20px 24px;
+    margin-bottom: 40px;
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  .impact-note strong { color: var(--gold-bright); }
+  .impact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--hairline);
+    border: 1px solid var(--hairline);
+  }
+  .impact-cell {
+    background: var(--panel);
+    padding: 32px 20px;
+    text-align: center;
+  }
+  .impact-cell .num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.6rem;
+    color: var(--gold-bright);
+    display: block;
+  }
+  .impact-cell .label {
+    font-size: 0.78rem;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+  @media (max-width: 640px) {
+    .impact-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* ---------- GET INVOLVED ---------- */
+  .paths {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .path-card {
+    background: var(--panel);
+    border: 1px solid var(--hairline);
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+  }
+  .path-card h3 { font-size: 1.6rem; color: var(--gold-bright); margin-bottom: 10px; }
+  .path-card p { color: var(--muted); font-size: 0.92rem; flex-grow: 1; margin-bottom: 22px; }
+  .path-card .btn { align-self: flex-start; }
+  @media (max-width: 860px) {
+    .paths { grid-template-columns: 1fr; }
+  }
+
+  /* ---------- TESTIMONIES (empty state) ---------- */
+  .empty-state {
+    border: 1px dashed var(--hairline);
+    padding: 60px 32px;
+    text-align: center;
+    background: var(--panel-2);
+  }
+  .empty-state .icon { font-size: 2rem; margin-bottom: 18px; opacity: 0.6; }
+  .empty-state h3 { font-size: 1.6rem; margin-bottom: 10px; color: var(--bone); }
+  .empty-state p { color: var(--muted); max-width: 460px; margin: 0 auto; }
+
+  /* ---------- PARTNERSHIP ---------- */
+  .partner-banner {
+    background: url('assets/banner-web.jpg') center/cover no-repeat;
+    position: relative;
+    padding: 90px 24px;
+    text-align: center;
+  }
+  .partner-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(11,10,8,0.85), rgba(11,10,8,0.94));
+  }
+  .partner-banner .wrap { position: relative; z-index: 2; max-width: 640px; }
+  .partner-banner h2 { font-size: clamp(2rem, 5vw, 2.8rem); margin-bottom: 16px; }
+  .partner-banner p { color: var(--muted); margin-bottom: 28px; }
+
+  /* ---------- ABOUT / FOUNDER ---------- */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 44px;
+    align-items: start;
+  }
+  .about-grid img {
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid var(--hairline);
+  }
+  .about-grid p { color: var(--muted); }
+  .about-grid .role { color: var(--gold-bright); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 12px; }
+  @media (max-width: 640px) {
+    .about-grid { grid-template-columns: 1fr; text-align: center; }
+    .about-grid img { width: 140px; margin: 0 auto; }
+  }
+
+  /* ---------- CONTACT ---------- */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .contact-card {
+    border: 1px solid var(--hairline);
+    padding: 28px;
+    text-align: center;
+  }
+  .contact-card .eyebrow { display: block; margin-bottom: 10px; }
+  .contact-card a, .contact-card span { color: var(--bone); font-size: 1.05rem; font-weight: 600; text-decoration: none; }
+  @media (max-width: 720px) {
+    .contact-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    padding: 56px 24px 40px;
+    text-align: center;
+  }
+  footer .scripture { display: block; max-width: 560px; margin: 0 auto 24px; font-size: 1.05rem; }
+  footer .fine {
+    color: var(--muted);
+    font-size: 0.8rem;
+    margin-top: 24px;
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <img src="assets/seal-web.jpg" alt="Operation: Restore seal">
+      OPERATION: RESTORE
+    </div>
+    <nav class="nav-links">
+      <a href="#what-we-do">What We Do</a>
+      <a href="#saturday">Restore Saturday</a>
+      <a href="#involved">Get Involved</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#involved">Get Involved</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-seal"></div>
+  <div class="hero-content wrap">
+    <img class="hero-seal-img" src="assets/seal-web.jpg" alt="Operation: Restore seal — Jackson, TN">
+    <h1>RESTORING FAITH.<br><span class="gold">REBUILDING LIVES.</span></h1>
+    <p class="hero-sub">A growing group of volunteers in Jackson, TN doing free home repairs, family support, and recovery-informed community service — because everyone we help has something to give back too.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#involved">Request Help</a>
+      <a class="btn btn-ghost" href="#involved">Become a Volunteer</a>
+    </div>
+  </div>
+</section>
+
+<div class="verse-strip">
+  <div class="wrap">
+    <p class="scripture">"He heals the brokenhearted and binds up their wounds."</p>
+    <cite>Psalm 147:3</cite>
+  </div>
+</div>
+
+<section class="section" id="what-we-do">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">What We Do</span>
+      <h2>Four ways we show up.</h2>
+      <p>We believe the early church model still works: a community that meets real needs, in person, until lives visibly change. Every project we run falls under one of these.</p>
+    </div>
+    <div class="arms-grid">
+      <div class="arm">
+        <span class="icon">🏠</span>
+        <h3>Restore Homes</h3>
+        <p>Free emergency repairs, accessibility builds, and disaster response — for people who genuinely can't afford them.</p>
+      </div>
+      <div class="arm">
+        <span class="icon">❤️</span>
+        <h3>Restore Lives</h3>
+        <p>Recovery support, job readiness, and résumé and interview coaching for people rebuilding from the ground up.</p>
+      </div>
+      <div class="arm">
+        <span class="icon">🤝</span>
+        <h3>Restore Families</h3>
+        <p>Furniture, move-in help, baby supplies, and crisis meals for families starting over.</p>
+      </div>
+      <div class="arm">
+        <span class="icon">📖</span>
+        <h3>Restore Dignity</h3>
+        <p>Every volunteer and every family we serve contributes a skill, not just a need. No one is only a recipient.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="saturday">
+  <div class="wrap">
+    <div class="saturday">
+      <div>
+        <span class="eyebrow">The Rhythm</span>
+        <h3>Restore Saturday</h3>
+        <p>Every last Saturday of the month, we come together to pray, serve, and restore. Whether you're hurting, helping, or hoping — there's a place for you here.</p>
+      </div>
+      <div>
+        <div class="saturday-fact">
+          <strong>Jackson, TN</strong>
+          <span>Serving our city with love — one project, one family at a time.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="impact">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Where We're At</span>
+      <h2>We're just getting started — honestly.</h2>
+      <p>Operation: Restore launched publicly this month. We'd rather show you real, small numbers than dress them up.</p>
+    </div>
+    <div class="impact-note">
+      <strong>Chapter Zero.</strong> Our first Restore Saturday hasn't happened yet. Every movement starts with one project — this is ours in progress, tracked in the open.
+    </div>
+    <div class="impact-grid">
+      <div class="impact-cell"><span class="num">5</span><span class="label">Volunteers Signed Up</span></div>
+      <div class="impact-cell"><span class="num">3</span><span class="label">Project Requests</span></div>
+      <div class="impact-cell"><span class="num">1</span><span class="label">Project Scheduled</span></div>
+      <div class="impact-cell"><span class="num">0</span><span class="label">Projects Completed — So Far</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="involved">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Get Involved</span>
+      <h2>Three ways in.</h2>
+      <p>Print, fill out, and text us a photo — or bring the form with you. Online submissions are coming soon.</p>
+    </div>
+    <div class="paths">
+      <div class="path-card">
+        <h3>Request Help</h3>
+        <p>Know a family or individual who needs a hand with a home repair or a fresh start? Fill out a Needs Assessment.</p>
+        <a class="btn btn-ghost" href="downloads/Needs_Assessment.pdf" target="_blank">Download Form</a>
+      </div>
+      <div class="path-card">
+        <h3>Volunteer</h3>
+        <p>Skilled or willing hands, one Saturday a month. Tell us what you're good at — we'll find where it fits.</p>
+        <a class="btn btn-ghost" href="downloads/Volunteer_SignUp.pdf" target="_blank">Sign Up</a>
+      </div>
+      <div class="path-card">
+        <h3>Partner With Us</h3>
+        <p>Churches and organizations: operate alongside us, or send us referrals from people you already trust.</p>
+        <a class="btn btn-ghost" href="downloads/Ministry_Partnership.pdf" target="_blank">Partnership Overview</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="testimonies">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Stories</span>
+      <h2>Testimonies</h2>
+    </div>
+    <div class="empty-state">
+      <span class="icon">✝</span>
+      <h3>Our first stories are being written.</h3>
+      <p>Check back after our first Restore Saturday — every testimony here will be shared with the family's permission.</p>
+    </div>
+  </div>
+</section>
+
+<div class="partner-banner">
+  <div class="wrap">
+    <span class="eyebrow">Isaiah 43:19</span>
+    <h2 class="scripture" style="font-family:'Source Serif 4',serif; font-style:italic;">"Behold, I will do a new thing; now it shall spring forth... I will even make a road in the wilderness, and rivers in the desert."</h2>
+    <a class="btn btn-primary" href="#involved">Be Part of the Restoration</a>
+  </div>
+</div>
+
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">About</span>
+      <h2>A movement before it's an organization.</h2>
+    </div>
+    <div class="about-grid">
+      <img src="assets/seal-web.jpg" alt="Operation: Restore">
+      <div>
+        <p class="role">Christopher Osburn — Founder &amp; Chapter Lead</p>
+        <p>Operation: Restore exists to prove, one town at a time, that lives change when a community meets real needs in person — and lets everyone, not just "helpers" and "the helped," contribute something. We do free skilled labor for people in genuine need, and we ask everyone we help what they're good at, because everyone has something to give back.</p>
+        <p>Based in Jackson, TN. Reach out by text to set up a service, ask about volunteering, or start a conversation about partnership.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact" style="border-bottom:none;">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Contact</span>
+      <h2>Reach out.</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <span class="eyebrow">Call or Text</span>
+        <a href="tel:7317277741">731-727-7741</a>
+      </div>
+      <div class="contact-card">
+        <span class="eyebrow">Serving</span>
+        <span>Jackson, TN</span>
+      </div>
+      <div class="contact-card">
+        <span class="eyebrow">Follow</span>
+        <a href="https://instagram.com/operationrestorejxn" target="_blank">@operationrestorejxn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="scripture">"They devoted themselves to fellowship and to the breaking of bread — and all the believers had everything in common." — Acts 2:42, 44</span>
+  <div class="eyebrow">Restore People. Restore Homes. Restore Families. Restore Hope.</div>
+  <div class="fine">© 2026 Operation: Restore — Jackson, TN. In God We Trust.</div>
+</footer>
+
+</body>
+</html>

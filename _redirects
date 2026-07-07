@@ -1,0 +1,4 @@
+# Cloudflare Pages redirects
+# Add future routes here, e.g. shortlinks for forms once v2 goes live:
+# /volunteer   /downloads/Volunteer_SignUp.pdf   302
+# /help        /downloads/Needs_Assessment.pdf   302
